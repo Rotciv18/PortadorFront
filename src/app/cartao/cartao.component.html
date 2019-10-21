@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-4"></div>
+    <div class="col-md-4">
+      <label><b>Adicionar Cartão a um Portador</b></label>
+      <form name="form" #f="ngForm" novalidate class="feedback-form">
+        <!-- ID -->
+        <div class="form-group">
+          <label for="id">Id do Portador</label>
+          <input
+            type="text"
+            id="id"
+            class="form-control"
+            name="id"
+            [(ngModel)]="model.id">
+        </div>
+
+        <button (click)="addCartao()" type="submit" class="btn btn-info pull-right">
+          <span>Adicionar Cartão</span>
+        </button>
+      </form>
+    </div>
+    <div class="offset-1"></div>
+  </div>
+</div>

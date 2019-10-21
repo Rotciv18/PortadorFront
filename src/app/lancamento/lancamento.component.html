@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-1"></div>
+    <div class="col-md-4">
+      <label><b>Adicionar um Lançamento</b></label>
+      <form name="form" #f="ngForm" novalidate class="feedback-form">
+        <!-- ID do Cartão -->
+        <div class="form-group">
+          <label for="idCartao">Id do Cartão</label>
+          <input
+            type="text"
+            id="idCartao"
+            class="form-control"
+            name="idCartao"
+            [(ngModel)]="idCartao"/>
+        </div>
+       <!-- Nome do produto -->
+        <div class="form-group">
+          <label for="nomeDoProduto">Nome do Produto</label>
+          <input
+            type="text"
+            id="nomeDoProduto"
+            class="form-control"
+            name="nomeDoProduto"
+            [(ngModel)]="modelLancamento.nomeDoProduto"/>
+        </div>
+        <!-- Preço do produto -->
+        <div class="form-group">
+          <label for="preco">Preço do Produto</label>
+          <input
+            type="text"
+            id="preco"
+            class="form-control"
+            name="preco"
+            [(ngModel)]="modelLancamento.preco"/>
+        </div>
+        <button (click)="addLancamento()" type="submit" class="btn btn-info pull-right">
+          <span>Adicionar Lançamento</span>
+        </button>
+
+      </form>
+    </div>
+    <div class="offset-2"></div>
+    <div class="col-md-4">
+    <label><b>Cancelar uma Compra</b></label>
+    <!-- ID do Lançamento -->
+    <div class="form-group">
+      <label for="idLancamento">ID do Lançamento</label>
+      <input
+        type="text"
+        id="idLancamento"
+        class="form-control"
+        name="idLancamento"
+        [(ngModel)]="idLancamento"/>
+    </div>
+      <button (click)="delLancamento()" type="submit" class="btn btn-danger pull-right">
+        <span>Cancelar Compra</span>
+      </button>
+    </div>
+    <div class="offset-1"></div>
+  </div>
+</div>

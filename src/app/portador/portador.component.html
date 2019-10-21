@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-4"></div>
+    <div class="col-md-4">
+      <label><b>Cadastrar Portador</b></label>
+      <form name="form" #f="ngForm" novalidate class="feedback-form">
+        <!-- Nome -->
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input
+            type="text"
+            id="nome"
+            class="form-control"
+            name="nome"
+            [(ngModel)]="model.nome">
+          </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text"
+                 id="email"
+                 class="form-control"
+                 name="email"
+                 [(ngModel)]="model.email"
+                 required email/>
+          <!-- input validation group -->
+        </div>
+
+        <!-- cpf -->
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input type="text"
+            id="cpf"
+            class="form-control"
+            name="cpf"
+                 placeholder="" [(ngModel)]="model.cpf"
+            required/>
+        </div>
+
+        <!-- Data de Nascimento -->
+        <div class="form-group">
+          <label for="dataNascimento">Data de Nascimento</label>
+          <input type="text"
+                 id="dataNascimento"
+                 class="form-control"
+                 name="cpf" [(ngModel)]="model.dataNascimento"
+                 required/>
+        </div>
+
+        <!-- Nome do Pai -->
+        <div class="form-group">
+          <label for="pai">Nome do Pai</label>
+          <input type="text"
+                 id="pai"
+                 class="form-control"
+                 name="cpf" [(ngModel)]="model.nomeDoPai"
+                 required/>
+        </div>
+
+        <!-- Nome da Mãe -->
+        <div class="form-group">
+          <label for="nomeDaMae">Nome da Mãe</label>
+          <input type="text"
+                 id="nomeDaMae"
+                 class="form-control"
+                 name="cpf" [(ngModel)]="model.nomeDaMae"
+                 required/>
+        </div>
+
+        <button (click)="enviarProposta()" type="submit" class="btn btn-info pull-right">
+          <span> Cadastrar Portador</span>
+        </button>
+      </form>
+    </div>
+    <div class="offset-1"></div>
+  </div>
+</div>
